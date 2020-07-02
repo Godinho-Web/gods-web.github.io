@@ -1,0 +1,57 @@
+body{
+    /* text-align: center; */
+    padding: 0;
+    margin: 0;
+}
+#principal{
+    display: flex;
+}
+#p_esquerda{
+    background-color: yellow;
+    width: 50%;
+    height: 500px;
+    margin-right: 2%;
+    margin: 5px;
+}
+#p_direita{
+    background-color: blue;
+    width: 50%;
+    height: 500px;
+    margin: 5px;
+}
+.titulo1{
+    text-align: center;
+}
+#s_esquerda{
+    background-color: rgb(63, 83, 68);
+    width: 99%;
+    height: 180px;
+    margin: 4px;
+}
+#i_esquerda{
+    background-color: rgb(63, 83, 68);
+    width: 99%;
+    height: 180px;
+    margin: 4px;
+    margin-top: 20px;
+}
+#s_direita{
+    background-color: rgb(211, 40, 17);
+    width: 99%;
+    height: 180px;
+    margin: 4px;
+}
+#i_direita{
+    background-color: rgb(224, 89, 11);
+    width: 99%;
+    height: 180px;
+    margin: 4px;
+    margin-top: 20px;
+}
+.img{
+    background-color: chartreuse ;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    text-align: center;
+}
