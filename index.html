@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Converter moedas</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="icon" href="/assets/converter.png">
+</head>
+<body>
+    <div class="container-fora">
+        <div class="container-dentro">
+            <form>
+                <div class="input-block">
+                    <label for="dolaratual">Dólar Hoje:</label>
+                    <input type="number" id="dolaratual">
+                </div>
+                <div class="input-block">
+                    <label for="emreais">Reais:</label>
+                    <input type="number" id="real">
+                </div>
+
+                <div class="input-block">
+                    <label for="emdolar" id="dolarlabel">Dólar:</label>
+                    <input type="number" id="dolars">
+                </div>
+
+                    <button type="button" onclick="converterValoresemdolars()">Converter em Dólar</button>
+                    <button type="button" onclick="converterValoresemreais()">Converter em Reais</button>
+
+
+                    <div class="resultado" id="resultadoemdolar"></div>
+                    <div class="resultado" id="resultadoemreais"></div>
+            </form>
+        </div>
+    </div>
+    <script>
+        // var reais = document.getElementById(`reais`)
+       
+
+        // var dinreais = Number(reais.innerText)
+        // reais.innerHTML = dinreais
+
+       
+        // dolar.innerHTML = parseFloat(dindolar.toFixed(2))
+
+        alert("Atenção, se você quiser converter nos dois valores, reinicie a página !")
+
+        // função para converter em dolars
+
+            var aus = document.getElementById(`dolaratual`).value;
+            var br = document.getElementById(`real`).value;
+            var usa = document.getElementById(`dolars`).value;
+
+        function converterValoresemdolars(){
+            var aus = document.getElementById(`dolaratual`).value;
+            var br = document.getElementById(`real`).value;
+            var usa = document.getElementById(`dolars`).value;
+
+            if( (aus=="" && br=="") || ( aus=="" && usa=="")  || aus=="" ){
+               alert("Verifique os campos")
+           }else{
+               
+                document.getElementById("dolars").disabled = true;
+                var dinreais = br / aus;
+                resultadoemdolar.innerHTML = " $ " + parseFloat(dinreais.toFixed(2)) + " Dolars";
+           } 
+        }
+        // funçao para converter em reais
+
+        function converterValoresemreais(){
+
+            var aus = document.getElementById(`dolaratual`).value;
+            var br = document.getElementById(`real`).value;
+            var usa = document.getElementById(`dolars`).value;
+
+
+           if( (aus=="" && br=="") || ( aus=="" && usa=="") || aus=="" ){
+               alert("Verifique os campos")
+            
+           }
+           else{
+                document.getElementById("real").disabled = true;
+                var dindolar = aus * usa;
+                resultadoemreais.innerHTML = " R$ " + parseFloat(dindolar.toFixed(2)) + " Reais"
+           }
+
+        }
+
+
+      
+
+        
+    </script>
+</body>
+</html>
