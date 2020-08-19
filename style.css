@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 230px;
+    font-size: 20pt;
+    font-family: Arial;
+    text-align: center;
+    background-color: rgb(61, 58, 58);
+
+}
+ .container-fora{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border: 2px double rgb(36, 33, 33);
+    width: 500px;
+    height: 300px;
+    margin-left: 300px;
+    background-color: #b1b1ab;
+ }
+
+ .container-dentro {
+    padding-top: 50px; 
+    width: 
+ }
+
+ input{
+    width: 150px;
+    height: 25px;
+    
+ }
+
+ #dolaratual {
+    margin-right: 57px
+ }
+
+ #dolarlabel {
+    margin-left: 5px
+ }
+ button {
+    width: 150px;
+    height: 45px;
+    font-size: 12pt;
+    margin-top: 15px;
+    
+    background-color: rgb(245, 239, 240);
+    border: none;
+
+ }
+
+.resultado {
+    margin-top: 10px;
+}
