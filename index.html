@@ -6,32 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Converter moedas</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="converter.png">
+    <link rel="icon" href="cash.png">
 </head>
 <body>
     <div class="container-fora">
         <div class="container-dentro">
             <form>
                 <div class="input-block">
-                    <label for="dolaratual">Dólar Hoje:</label>
+                    <label for="dolaratual">Dólar  Hoje:</label>
                     <input type="number" id="dolaratual">
                 </div>
-                <div class="input-block">
+                <div class="input-block reais">
                     <label for="emreais">Reais:</label>
                     <input type="number" id="real">
                 </div>
-
-                <div class="input-block">
+                <div class="input-block moeda">
                     <label for="emdolar" id="dolarlabel">Dólar:</label>
                     <input type="number" id="dolars">
                 </div>
-
+                <div class="button-block">
                     <button type="button" onclick="converterValoresemdolars()">Converter em Dólar</button>
                     <button type="button" onclick="converterValoresemreais()">Converter em Reais</button>
+                </div>
 
-
-                    <div class="resultado" id="resultadoemdolar"></div>
-                    <div class="resultado" id="resultadoemreais"></div>
+                    <div class="resultado" id="resultadoem"></div>
+                    <!-- <div class="resultado" class="resultadoem"></div> -->
             </form>
         </div>
     </div>
@@ -64,7 +63,8 @@
                
                 document.getElementById("dolars").disabled = true;
                 var dinreais = br / aus;
-                resultadoemdolar.innerHTML = " $ " + parseFloat(dinreais.toFixed(2)) + " Dolars";
+                resultadoem.innerHTML = " U$ " + parseFloat(dinreais.toFixed(2)) ;
+                image("estados-unidos.png");
            } 
         }
         // funçao para converter em reais
@@ -83,9 +83,21 @@
            else{
                 document.getElementById("real").disabled = true;
                 var dindolar = aus * usa;
-                resultadoemreais.innerHTML = " R$ " + parseFloat(dindolar.toFixed(2)) + " Reais"
+               
+                resultadoem.innerHTML = " R$ " + parseFloat(dindolar.toFixed(2)) ;
+                image("brasil.png");
+               
+              
            }
 
+        }
+
+        function image(pathImage) {
+            var img = document.createElement("IMG");
+            img.src = pathImage;
+            img.width = 50;
+            img.height = 50;
+            document.getElementById('resultadoem').appendChild(img);
         }
 
 
